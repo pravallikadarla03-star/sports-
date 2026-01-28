@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportPulse | Your Daily Sports Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling to make it look good immediately */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f4f4; }
+        header { background: #1a1a1a; color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; }
+        
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1350&q=80'); 
+                height: 400px; background-size: cover; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        
+        .container { width: 90%; max-width: 1200px; margin: 20px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .score-table { width: 100%; border-collapse: collapse; }
+        .score-table th, .score-table td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+        .live-dot { height: 10px; width: 10px; background-color: red; border-radius: 50%; display: inline-block; margin-right: 5px; }
+        
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SportPulse</h1>
+        <nav>
+            <a href="#">Scores</a>
+            <a href="#">News</a>
+            <a href="#">Teams</a>
+            <a href="#">Stats</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Championship Finals Tonight</h2>
+        <p>Catch all the live action starting at 8:00 PM EST</p>
+        <button style="padding: 10px 20px; background: #e74c3c; color: white; border: none; cursor: pointer; border-radius: 5px;">Watch Live</button>
+    </section>
+
+    <main class="container">
+        <section class="content">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=60" alt="Sports Action" style="width:100%; border-radius: 5px;">
+                <h3>The Underdog Story: How They Defied the Odds</h3>
+                <p>In a stunning turn of events, the local favorites were pushed to the limit in yesterday's playoff matchup...</p>
+                <a href="#">Read More</a>
+            </div>
+            
+            <div class="card">
+                <h3>Transfer Rumors: Who's Moving Where?</h3>
+                <p>The mid-season window is opening soon, and several big names are reportedly on the move.</p>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Live Scores</h3>
+                <table class="score-table">
+                    <tr>
+                        <td><span class="live-dot"></span> Lakers vs Celtics</td>
+                        <td><strong>102 - 98</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Man City vs Arsenal</td>
+                        <td><strong>1 - 1</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Yankees vs Red Sox</td>
+                        <td><strong>4 - 2</strong></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="card">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Super Bowl LVIII - Feb 11</li>
+                    <li>NBA All-Star Weekend - Feb 16</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+</body>
+</html>
